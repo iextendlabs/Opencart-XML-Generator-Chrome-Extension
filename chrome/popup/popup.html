@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCMOD Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+       .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>OCMOD Generator</h3>
+
+    <div class="section">
+        <button id="addFindBtn">Add Selected Text to Find</button>
+        <label for="findOutput">Find Array:</label>
+        <textarea id="findOutput" readonly></textarea>
+    </div>
+
+    <div class="section">
+        <button id="addReplaceBtn">Add Selected Text to Replace</button>
+        <label for="replaceOutput">Replace Array:</label>
+        <textarea id="replaceOutput" readonly></textarea>
+    </div>
+
+    <div class="section">
+        <button id="setFileBtn">Set File</button>
+        <label for="fileOutput">File:</label>
+        <textarea id="fileOutput" readonly></textarea>
+    </div>
+
+    <div class="section">
+        <button id="copyOperationBtn">Operation After</button>
+        <button id="copyReplaceBtn">Operation Replace</button>
+        <button id="copyBeforeBtn">Operation Before</button>
+        <button id="copyResultBtn">File xml</button>
+        <button id="ocmodBtn">OCMOD Template</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
