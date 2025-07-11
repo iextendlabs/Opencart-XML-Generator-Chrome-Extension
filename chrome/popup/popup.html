@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>OCMOD Generator</title>
+    <title>Opencart OCMOD Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: 300px;
+            width: 600px;
             padding: 10px;
             background-color: #f4f4f4;
         }
+
         h3 {
             color: #333;
             margin-bottom: 15px;
         }
+
         button {
             background-color: #007bff;
             color: white;
@@ -24,16 +27,19 @@
             width: 100%;
             box-sizing: border-box;
         }
+
         button:hover {
             background-color: #0056b3;
         }
-       .section {
+
+        .section {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 10px;
             margin-bottom: 10px;
         }
+
         textarea {
             width: 100%;
             height: 80px;
@@ -44,6 +50,7 @@
             box-sizing: border-box;
             resize: vertical;
         }
+
         label {
             font-weight: bold;
             display: block;
@@ -51,35 +58,38 @@
         }
     </style>
 </head>
+
 <body>
-    <h3>OCMOD Generator</h3>
+    <h3>Opencart OCMOD Generator</h3>
 
     <div class="section">
         <button id="addFindBtn">Add Selected Text to Find</button>
-        <label for="findOutput">Find Array:</label>
-        <textarea id="findOutput" readonly></textarea>
+        <textarea id="findOutput"></textarea>
     </div>
 
     <div class="section">
-        <button id="addReplaceBtn">Add Selected Text to Replace</button>
-        <label for="replaceOutput">Replace Array:</label>
-        <textarea id="replaceOutput" readonly></textarea>
+        <button id="addReplaceBtn">Add Selected Text to Update</button>
+        <textarea id="replaceOutput"></textarea>
+    </div>
+    <div class="section">
+        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+            <button id="copyOperationBtn" style="flex:1; min-width:0;">After</button>
+            <button id="copyReplaceBtn" style="flex:1; min-width:0;">Replace</button>
+            <button id="copyBeforeBtn" style="flex:1; min-width:0;">Before</button>
+        </div>
     </div>
 
     <div class="section">
         <button id="setFileBtn">Set File</button>
-        <label for="fileOutput">File:</label>
-        <textarea id="fileOutput" readonly></textarea>
+        <textarea id="fileOutput"></textarea>
     </div>
 
     <div class="section">
-        <button id="copyOperationBtn">Operation After</button>
-        <button id="copyReplaceBtn">Operation Replace</button>
-        <button id="copyBeforeBtn">Operation Before</button>
         <button id="copyResultBtn">File xml</button>
         <button id="ocmodBtn">OCMOD Template</button>
     </div>
-
+<p>made by saqib ashraf | iextendlabs.com </p>
     <script src="popup.js"></script>
 </body>
+
 </html>

@@ -165,3 +165,17 @@ document.getElementById('ocmodBtn').addEventListener('click', () => {
 
 // Load initial data when the popup opens
 document.addEventListener('DOMContentLoaded', updateUI)
+
+// Save textarea changes to storage when user edits them
+['findOutput', 'replaceOutput', 'fileOutput'].forEach(id => {
+    document.getElementById(id).addEventListener('input', async (e) => {
+        const value = e.target.value
+        if (id === 'findOutput') {
+            await chrome.storage.local.set({ findArray: value })
+        } else if (id === 'replaceOutput') {
+            await chrome.storage.local.set({ replaceArray: value })
+        } else if (id === 'fileOutput') {
+            await chrome.storage.local.set({ filePath: value })
+        }
+    })
+})
